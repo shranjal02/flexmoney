@@ -53,21 +53,12 @@
     <script>
 
 
-        // btn.addEventListener('click', () => {
-
-
-        //     window.open('payment.html');
-
-        // });
-
-
-
         btn.addEventListener('click', () => {
             let obj = { fname: fname.value, lname: lname.value, age: uage.value, email: uemail.value, gender: gender.value };
 
             localStorage.setItem('info', JSON.stringify(obj));
             console.log(obj);
-            window.open('section.html');
+            window.open('payment.html');
 
         });
     </script>
