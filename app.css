@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background :url(image/File.jpg);
+    background-size: 280%;
+    background-position: -400px 0px;
+
+}
+div.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+
+}
+
+div.data{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+#btn{
+    width: 100px;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(300, 300, 200, 0.7);
+    margin-left: 125px;
+}
