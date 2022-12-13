@@ -51,14 +51,11 @@
     <script>
         btn.addEventListener('click', () => {
 
-            let x = localStorage.getItem('info');
-            let y = localStorage.getItem('fee');
+            let x = localStorage.getItem('info','fee');
 
             console.log(x, typeof x);
-            console.log(y, typeof y);
 
             let obj = JSON.parse(x);
-            let obj2 = JSON.parse(y);
 
 
             td1.innerText = obj.fname;
@@ -66,7 +63,7 @@
             td3.innerText = obj.age;
             td4.innerText = obj.email;
             td5.innerText = obj.gender;
-            td6.innerText = obj2.payment;            
+            td6.innerText = obj.payment;            
         });
 
 
