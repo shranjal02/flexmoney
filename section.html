@@ -11,51 +11,55 @@
 </head>
 
 <body>
-  <div class="main">
-    <div class="data" id="data">
-        <table border="2" method="GET">
-            <tr>
-                <th>First Name</th>
-                <td id="td1"> </td>
-            </tr>
-            <tr>
-                <th>Last Name</th>
-                <td id="td2"></td>
-            </tr>
-    
-            <tr>
-                <th>Age</th>
-                <td id="td3"></td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td id="td4"></td>
-            </tr>
-            <tr>
-                <th>Gender</th>
-                <td id="td5"></td>
-            </tr>
+    <div class="main">
+        <div class="data" id="data">
+            <table border="2" method="GET">
+                <tr>
+                    <th>First Name</th>
+                    <td id="td1"> </td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td id="td2"></td>
+                </tr>
 
-            <tr>
-                <th>Collected Fees</th>
-                <td id="td6"></td>
-            </tr>
-    
-    
-        </table>
-    
-        <button id="btn">Show Data</button>
+                <tr>
+                    <th>Age</th>
+                    <td id="td3"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td id="td4"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td id="td5"></td>
+                </tr>
+
+                <tr>
+                    <th>Collected Fees</th>
+                    <td id="td6"></td>
+                </tr>
+
+
+            </table>
+
+            <button id="btn">Show Data</button>
+        </div>
     </div>
-  </div>
 
     <script>
         btn.addEventListener('click', () => {
 
-            let x = localStorage.getItem('info','fee');
+            let x = localStorage.getItem('info');
+
+            let y = localStorage.getItem('fee');
+            console.log(y);
 
             console.log(x, typeof x);
 
             let obj = JSON.parse(x);
+            let val = JSON.parse(y);
 
 
             td1.innerText = obj.fname;
@@ -63,7 +67,8 @@
             td3.innerText = obj.age;
             td4.innerText = obj.email;
             td5.innerText = obj.gender;
-            td6.innerText = obj.payment;            
+            td6.innerText = val.payment;
+            // console.log(val.payment);
         });
 
 
