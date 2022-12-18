@@ -13,15 +13,10 @@
 <body>
 
     <div class="container">
-
         <form action="">
-
             <div class="row">
-
                 <div class="col">
-
                     <h3 class="title">billing address</h3>
-
                     <div class="inputBox">
                         <span>full name :</span>
                         <input type="text" placeholder="Enter Your Name">
@@ -36,7 +31,7 @@
                     </div>
                     <div class="inputBox">
                         <span>Fees Amount :</span>
-                        <input type="number" min="500" id="fee-amount" placeholder="Amount">
+                        <input type="number" min="500" id="fee_amount" placeholder="Amount">
                     </div>
 
                     <div class="flex">
@@ -83,30 +78,26 @@
                             <input type="text" placeholder="1234">
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-            <!-- <input type="submit" value="proceed to checkout" class="submit-btn" id="payment_btn"> -->
-            <div class ="proceed">
-                <a href="section.html" id="payment_btn"> Submit </a>
-
+            <div class="proceed">
+                <a href="#" id="payment_btn"> Submit </a>
             </div>
         </form>
-
     </div>
 
 
     <script>
 
 
-        payment_btn.addEventListner('click', () => {
+        payment_btn.addEventListener('click', () => {
 
 
-            let obj = { payment: fee-amount.value};
-            localStorage.setItem('fee', JSON.stringify(obj));
-            console.log(obj);
+            let Fee = { payment: fee_amount.value };
+            localStorage.setItem('fee', JSON.stringify(Fee));
+            // localStorage.setItem('fee',fee_amount.value);
+
+            console.log(Fee);
             window.open('section.html');
         });
 
